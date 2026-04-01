@@ -1,8 +1,14 @@
 package Praktikum05;
 
 public class MahasiswaBerprestasi02 {
-    Mahasiswa02[] listMhs = new Mahasiswa02[5];
+    Mahasiswa02[] listMhs;
     int idx;
+    
+    // Konstruktor menerima kapasitas dinamis
+    MahasiswaBerprestasi02(int kapasitas) {
+        listMhs = new Mahasiswa02[kapasitas];
+        idx = 0;
+    }
     
     void tambah(Mahasiswa02 m){
         if (idx < listMhs.length) {
