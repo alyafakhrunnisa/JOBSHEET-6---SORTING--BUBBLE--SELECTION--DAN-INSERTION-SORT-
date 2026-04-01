@@ -12,7 +12,7 @@ public class MahasiswaDemo02 {
         MahasiswaBerprestasi02 list = new MahasiswaBerprestasi02(jumlah);
 
         for (int i = 0; i < jumlah; i++) {
-            System.out.println("--- Masukkan data mahasiswa ke-" + (i + 1)+ "---");
+            System.out.println("Masukkan data mahasiswa ke-" + (i + 1));
             System.out.print("NIM : ");
             String nim = sc.nextLine();
             System.out.print("Nama : ");
@@ -21,19 +21,28 @@ public class MahasiswaDemo02 {
             String kelas = sc.nextLine();
             System.out.print("IPK : ");
             double ipk = Double.parseDouble(sc.nextLine()); // Read as string and parse to double
+            System.out.println("-----------------------");
             sc.nextLine(); // Clear buffer
 
             Mahasiswa02 m = new Mahasiswa02(nim, nama, kelas, ipk);
             list.tambah(m);
         }
 
-        System.out.println("Data mahasiswa sebelum sorting: ");
-        list.tampil();
-        list.bubbleSort();
+        // System.out.println("Data mahasiswa sebelum sorting: ");
+        // list.tampil();
+        // list.bubbleSort();
 
         
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC): ");
+        // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC): ");
+        // list.tampil();
+        // sc.close();
+
+        // System.out.println("Data yang sudah terurut menggunkan SELECTION SORT (ASC) : ");
+        // list.selectionSort();
+        // list.tampil();
+
+        System.out.println("Data yang sudah terurut menggunkan INSERTION SORT (ASC) : ");
+        list.insertionSort();
         list.tampil();
-        sc.close();
     }
 }
