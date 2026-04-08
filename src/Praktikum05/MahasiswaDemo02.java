@@ -10,7 +10,7 @@ public class MahasiswaDemo02 {
         int j = sc.nextInt();
          MahasiswaBerprestasi02 list = new MahasiswaBerprestasi02(j);
         sc.nextLine(); // Consume newline left-over
-        int jumMhs = j;
+        int jumMhs = j; //
 
 
         for (int i = 0; i < j; i++) {
